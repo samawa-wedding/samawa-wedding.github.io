@@ -97,4 +97,5 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    opacity: 0.8;
 }
