@@ -50,8 +50,8 @@
     height: 100% !important;
     overflow-y: hidden !important;
     overflow-x: hidden !important;
-    z-index: 9999 !important; 
- 
+    z-index: 9999 !important;
+
 }
 
 .hero-page {
@@ -59,8 +59,7 @@
     inset: 0;
     width: 100% !important;
     height: 100% !important;
-
-    z-index: 9999 !important; 
+    z-index: 9999 !important;
 }
 
 
@@ -83,7 +82,7 @@
 
 .bg-cover-welcome {
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.3;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
