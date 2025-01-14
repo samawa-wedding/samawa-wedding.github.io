@@ -130,7 +130,7 @@
         data-bs-smooth-scroll="true" tabindex="0">
         <!-- Home -->
         <section id="home" class="bg-light position-relative overflow-hidden p-0 m-0">
-            <img src="./assets/images/bg.png" alt="bg"
+            <img src="./assets/images/dm1.png" alt="bg"
                 class="position-absolute opacity-25 top-50 start-50 translate-middle bg-cover-home" />
 
             <div class="position-relative text-center p-2">
@@ -138,7 +138,7 @@
                     Undangan Pernikahan
                 </h1>
 
-                <img src="./assets/images/bg.png" alt="bg" onclick="guest.modal(this)"
+                <img src="./assets/images/dm1.png" alt="bg" onclick="guest.modal(this)"
                     class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto" />
 
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem; font-weight: 600">
@@ -633,7 +633,7 @@
                                 data-aos="fade-down" data-aos-duration="2500">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
                                     class="img-fluid p-1 rounded"
-                                    style="max-width: 9vh; background-color: var(--bs-gray-300)" alt="bri" />
+                                    style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
 
                                 <div class="d-flex justify-content-between align-items-center mt-2">
                                     <p class="m-0 p-0" style="font-size: 0.95rem">
@@ -655,7 +655,7 @@
                                 data-aos="fade-down" data-aos-duration="2500">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
                                     class="img-fluid p-1 rounded"
-                                    style="max-width: 9vh; background-color: var(--bs-gray-300)" alt="bri" />
+                                    style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
 
                                 <div class="d-flex justify-content-between align-items-center mt-2">
                                     <p class="m-0 p-0" style="font-size: 0.95rem">
@@ -792,19 +792,9 @@
                 </p>
                 <p style="font-size: 1.3rem">Dhika & Mala</p>
                 <div class="mb-2 mx-auto border border-3 border-light" data-aos="fade-down" data-aos-duration="2000"
-                    style="
-              height: 240px;
-              width: 190px;
-              overflow: hidden;
-              border-radius: 250px 250px 0px 0px;
-              padding: 10px;
-            ">
-                    <img src="./assets/images/poto1.jpg" alt="bg" onclick="guest.modal(this)" style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 250px 250px 0px 0px;
-              " />
+                    style="height: 240px; width: 190px; overflow: hidden; border-radius: 250px 250px 0px 0px; padding: 10px;">
+                    <img src="./assets/images/poto1.jpg" alt="bg" onclick="guest.modal(this)"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 250px 250px 0px 0px;" />
                 </div>
                 <div class="row pb-1 pt-1">
                     <div class="col-sm-2 col-6 m-auto">
@@ -824,18 +814,22 @@
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="row align-items-center justify-content-between flex-column flex-sm-row pb-3">
                         <div class="col-auto">
-                            <small class="block" text-center style="font-size: 0.6rem">&copy; 2025 Aifz Simple Gift For
-                                Dhika Wedding. All Rights
-                                Reserved.</small>
+                            <small class="block text-center" style="font-size: 0.6rem;">&copy;
+                                2025 Aifz Simple Gift For Dhika Wedding. All Rights Reserved &nbsp;
+                                <div class="animate__animated animate__heartBeat animate__slow animate__infinite"
+                                    style="display: inline-block;">
+                                    <span class="fa fa-heart" style="color:#ff415c;"></span>
+                                </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
 
     <!-- Welcome Page -->
-    <div class="loading-page bg-black" id="welcome" style="opacity: 1">
+    <div class="loading-page bg-light" id="welcome" style="opacity: 1">
         <div class="d-flex justify-content-center align-items-center w-100 h-100">
             <img src="./assets/images/dm1.png" alt="bg" class="bg-cover-welcome" />
             <div class="text-center">
@@ -846,14 +840,15 @@
                     <img src="./assets/images/dm1.png" alt="background"
                         class="img-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto" />
                     <h2 class="font-esthetic my-4 text-dark" style="font-size: 3rem; font-weight: 650; color: #ba9c55">
-                        Dika &amp; Malla
+                        Dika &amp; Mala
                     </h2>
                     <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
                 </div>
 
-                <div class="animate__animated animate__swing animate__slower">
-                    <button type="button" class="btn btn-light shadow rounded-4 mt-3" id="goFS"
-                        onclick="guest.open(this)" style="position: relative">
+                <div class="animate__animated animate__backInUp animate__slower">
+                    <button type="button"
+                        class="btn btn-light shadow rounded-4 mt-4 animate__animated animate__swing animate__slow animate__delay-3s animate__infinite "
+                        id="goFS" onclick="guest.open(this)" style="position: relative">
                         <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
                     </button>
                 </div>
@@ -878,8 +873,8 @@
     <div class="loading-page bg-black" id="loading" style="opacity: 1">
         <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important">
             <div class="w-75 text-center">
-                <img class="img-fluid mb-3" src="./assets/images/logo_mecha.png" alt="icon"
-                    style="width: 100px; height: 75px" />
+                <img class="img-fluid mb-3 animate__animated animate__heartBeat animate__slow"
+                    src="./assets/images/logo_mecha.png" alt="icon" style="width: 100px; height: 75px" />
                 <div class="progress" role="progressbar" style="height: 0.5rem">
                     <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
                 </div>
