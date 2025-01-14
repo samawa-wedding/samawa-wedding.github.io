@@ -117,6 +117,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#gift">
+                    <i class="fa-solid fa-gift"></i>
+                    <span class="d-block" style="font-size: 0.77rem">Gift</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#comment">
                     <i class="fa-solid fa-comments"></i>
                     <span class="d-block" style="font-size: 0.77rem">Ucapan</span>
@@ -296,7 +302,7 @@
         </svg>
 
         <!-- Firman Allah Subhanahu Wa Ta'ala -->
-        <section class="bg-light pb-4">
+        <section id="pray" class="bg-light pb-4 center-screen">
             <div class="container text-center">
                 <h2 class="font-esthetic py-2 m-0" style="font-size: 2.3rem">
                     Do'a Untuk Pengantin
@@ -344,13 +350,13 @@
         </svg>
 
         <!-- Wedding Date -->
-        <section class="bg-black pb-2" id="wedding-date">
+        <section class="bg-black pb-2 center-screen" id="wedding-date">
             <div class="container text-center">
-                <h2 class="font-esthetic py-4 m-0" style="font-size: 2.5rem">
+                <h2 class="font-esthetic py-2 m-0" style="font-size: 2.5rem">
                     Moment Bahagia
                 </h2>
 
-                <div class="border rounded-pill shadow py-2 px-4 mt-2 mb-4">
+                <div class="border rounded-pill shadow py-2 px-2 mt-2 mb-2">
                     <!-- Ganti waktunya pada data-waktu (sesuai format tersebut) -->
                     <div class="row justify-content-center" data-time="2025-01-03 08:00:00" id="count-down">
                         <div class="col-3 p-1">
@@ -428,13 +434,9 @@
                 </div>
 
                 <div class="py-2" data-aos="fade-down" data-aos-duration="1500">
-                    <h2 class="font-esthetic m-0 py-2" style="font-size: 2rem">
+                    <h2 class="font-esthetic m-0 py-0" style="font-size: 2rem">
                         Lokasi Acara
                     </h2>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d247.90332845222972!2d106.93855048262306!3d-6.203784991617139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTInMTMuNSJTIDEwNsKwNTYnMTkuMSJF!5e0!3m2!1sen!2sid!4v1735559425500!5m2!1sen!2sid"
-                        width="80%" height="100px" style="border: 0" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="py-2" data-aos="fade-down" data-aos-duration="1500">
@@ -616,65 +618,142 @@
         </svg>
 
         <!-- Love Gift -->
-        <div class="container">
-            <div class="pb-2">
-                <div class="text-center">
-                    <h2 class="font-esthetic mt-0 mb-3" style="font-size: 2.5rem">
-                        Love Gift
-                    </h2>
-                    <p class="mb-3" style="font-size: 0.95rem">
-                        Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan
-                        tanda kasih untuk kami, dapat melalui:
-                    </p>
+        <section class="bg-black pb-5 pt-4 center-screen" id="gift">
+            <div class="container center-screen">
+                <div class="pb-2">
+                    <div class="text-center">
+                        <h2 class="font-esthetic mt-0 mb-3" style="font-size: 2.5rem">
+                            Love Gift
+                        </h2>
+                        <p class="mb-3" style="font-size: 0.95rem">
+                            Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin
+                            memberi hadiah kami sediakan fitur
+                            berikut
+                        </p>
 
-                    <div class="overflow-x-hidden">
-                        <div class="row row-cols-2">
-                            <div class="col card-body border rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-start"
-                                data-aos="fade-down" data-aos-duration="2500">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
-                                    class="img-fluid p-1 rounded"
-                                    style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
+                        <div class="text-center" style="display:flex; justify-content:space-around;">
+                            <button id="btn_kado" style="width: 100%; margin: 5px;"
+                                class="btn btn-light shadow rounded-4 m-4 animate__animated animate__fadeInUp animate__slow">Hadiah</button>
+                            <button id="btn_hadiah" style="width: 100%; margin: 5px;"
+                                class="btn btn-light shadow rounded-4 m-4 animate__animated animate__fadeInUp animate__slow">Kirim
+                                Kado</button>
+                        </div>
 
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <p class="m-0 p-0" style="font-size: 0.95rem">
-                                        6877 0102 7255 530
+                        <div id="kado" style="display: block;" class="overflow-x-hidden">
+                            <div class="row row-cols-2">
+                                <div class="col card-body border rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-start"
+                                    data-aos="fade-down" data-aos-duration="2500">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
+                                        class="img-fluid p-1 rounded"
+                                        style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
+
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <p class="m-0 p-0" style="font-size: 0.95rem">
+                                            6877 0102 7255 530
+                                        </p>
+                                        <!-- Ubah juga data-copy sesuai dengan no rekening -->
+                                        <button class="btn btn-outline-dark btn-sm rounded-4"
+                                            data-copy="687701027255530" onclick="util.copy(this, 'Tersalin')">
+                                            <i class="fa-solid fa-copy me-1"></i>Salin
+                                        </button>
+                                    </div>
+                                    <p class="mt-2 mb-0 p-0" style="font-size: 0.95rem">
+                                        Handika Ariyanto
                                     </p>
-                                    <!-- Ubah juga data-copy sesuai dengan no rekening -->
-                                    <button class="btn btn-outline-dark btn-sm rounded-4" data-copy="687701027255530"
-                                        onclick="util.copy(this, 'Tersalin')">
-                                        <i class="fa-solid fa-copy me-1"></i>Salin
-                                    </button>
                                 </div>
 
-                                <p class="mt-2 mb-0 p-0" style="font-size: 0.95rem">
-                                    Handika Ariyanto
-                                </p>
-                            </div>
+                                <div class="col card-body border rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-start"
+                                    data-aos="fade-down" data-aos-duration="2500">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
+                                        class="img-fluid p-1 rounded"
+                                        style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
 
-                            <div class="col card-body border rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-start"
-                                data-aos="fade-down" data-aos-duration="2500">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/800px-BRI_2020.svg.png"
-                                    class="img-fluid p-1 rounded"
-                                    style="max-width: 9vh; background-color: var(--bs-light)" alt="bri" />
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <p class="m-0 p-0" style="font-size: 0.95rem">
+                                            7639 0100 8530 536
+                                        </p>
+                                        <!-- Ubah juga data-copy sesuai dengan no rekening -->
+                                        <button class="btn btn-outline-dark btn-sm rounded-4"
+                                            data-copy="763901008530536" onclick="util.copy(this, 'Tersalin')">
+                                            <i class="fa-solid fa-copy me-1"></i>Salin
+                                        </button>
+                                    </div>
 
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <p class="m-0 p-0" style="font-size: 0.95rem">
-                                        7639 0100 8530 536
-                                    </p>
-                                    <!-- Ubah juga data-copy sesuai dengan no rekening -->
-                                    <button class="btn btn-outline-dark btn-sm rounded-4" data-copy="763901008530536"
-                                        onclick="util.copy(this, 'Tersalin')">
-                                        <i class="fa-solid fa-copy me-1"></i>Salin
-                                    </button>
+                                    <p class="mt-2 mb-0 p-0" style="font-size: 0.95rem">Komala</p>
                                 </div>
-
-                                <p class="mt-2 mb-0 p-0" style="font-size: 0.95rem">Komala</p>
                             </div>
+                        </div>
+                        <div id="hadiah" style="display: none;" class="overflow-x-hidden">
+                            <div class="row row-cols-2">
+                                <div class="col card-body border rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-center"
+                                    data-aos="fade-down" data-aos-duration="2500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                                        viewBox="0 0 48 48">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #ffde76
+                                                }
+
+                                                .cls-2 {
+                                                    fill: #fc6
+                                                }
+
+                                                .cls-3 {
+                                                    fill: #db5669
+                                                }
+
+                                                .cls-4 {
+                                                    fill: #f26674
+                                                }
+
+                                                .cls-6 {
+                                                    fill: #ffba55
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Gift">
+                                            <path class="cls-1" d="M29 11h18v8H29z" />
+                                            <path class="cls-2" d="M1 11h18v8H1z" />
+                                            <path class="cls-1" d="M10 11h9v8h-9z" />
+                                            <path class="cls-2" d="M29 19h15v28H29z" />
+                                            <path class="cls-1" d="M29 19h15v26H29z" />
+                                            <path class="cls-2" d="M4 19h15v28H4z" />
+                                            <path class="cls-1" d="M10 21h9v24h-5a4 4 0 0 1-4-4V21z" />
+                                            <path class="cls-3" d="M19 11h10v36H19z" />
+                                            <path class="cls-4" d="M19 11h10v34H19z" />
+                                            <path class="cls-3" d="M36 6a5 5 0 0 1-5 5h-5V6a5 5 0 0 1 10 0z" />
+                                            <path class="cls-4" d="M30 1.1a5 5 0 0 1-1 9.9h2a5 5 0 1 0-1-9.9z" />
+                                            <path class="cls-3" d="M22 6v5h-5a5 5 0 1 1 5-5z" />
+                                            <path class="cls-4"
+                                                d="M17 1a5 5 0 0 0-4.9 6A5 5 0 0 1 22 8V6a5 5 0 0 0-5-5z" />
+                                            <path class="cls-3" d="M26 6.41V11h-4V6.41a5.09 5.09 0 0 1 4 0z" />
+                                            <path class="cls-4"
+                                                d="M25 6.1v1a4.71 4.71 0 0 0-1-.1c-2.34 0-2 1.21-2-.59a5.13 5.13 0 0 1 3-.31z" />
+                                            <path class="cls-3"
+                                                d="M26 6.41v1c-1.25-.55-1 .13-1-1.31a4.84 4.84 0 0 1 1 .31z" />
+                                            <path d="M26 7.41V11h-1V7.1a4.84 4.84 0 0 1 1 .31z" style="fill:#c4455e" />
+                                            <path class="cls-6" d="M4 19h6v2H4z" />
+                                            <path class="cls-2" d="M10 19h8v2h-8zM29 19h15v2H29z" />
+                                            <path class="cls-6" d="M18 19h1v2h-1z" />
+                                            <path class="cls-6" d="M18 19h1v2h-1z" />
+                                            <path class="cls-2" d="M18 11h1v8h-1zM18 21h1v24h-1z" />
+                                        </g>
+                                    </svg>
+                                    <p class="mt-4" style="font-size: 1rem">
+                                        Anda dapat mengirim kado ke:
+                                    </p>
+                                    <div class="mb-0">
+                                        Kp.Pisangan Bulak Rt.19/05 Penggilingan, Cakung Jakarta Timur
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        </section>
 
         <!-- Ballon animation -->
         <div class="position-relative">

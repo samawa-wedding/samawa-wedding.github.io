@@ -14,12 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 var goFS = document.getElementById('goFS');
-        var Elbody = document.querySelector("body");
-        goFS.addEventListener('click',function () {
-        Elbody.style.overflowY='scroll';
-        util.fullscreen();
-        },false);
-        window.addEventListener("load",function() {
-        Elbody.style.overflowY='hidden';
-        window.scrollTo(0, 1);
-        });
+var btn_kado = document.getElementById('btn_kado');
+var btn_hadiah = document.getElementById('btn_hadiah');
+var Elbody = document.querySelector("body");
+
+goFS.addEventListener('click', function () {
+    Elbody.style.overflowY = 'scroll';
+    util.fullscreen();
+}, false);
+window.addEventListener("load", function () {
+    Elbody.style.overflowY = 'hidden';
+    window.scrollTo(0, 1);
+});
+
+btn_kado.addEventListener('click', function () {
+    document.getElementById('kado').style.display = "block";
+    document.getElementById('hadiah').style.display = "none";
+}, false);
+
+btn_hadiah.addEventListener('click', function () {
+    document.getElementById('hadiah').style.display = "block";
+    document.getElementById('kado').style.display = "none";
+}, false);
