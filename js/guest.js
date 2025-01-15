@@ -10,9 +10,9 @@ import { confetti } from './confetti.js';
 import { bootstrap } from './bootstrap.js';
 
 export const guest = (() => {
-    
-    
-    
+
+
+
     /**
      * @type {ReturnType<typeof storage>|null}
      */
@@ -24,48 +24,48 @@ export const guest = (() => {
     const countDownDate = () => {
         let x;
         const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-        
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
         const until = document.getElementById('count-down')?.getAttribute('data-time')?.replace(' ', 'T');
         if (!until) {
             return;
         }
 
         let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "01/26/",
-        birthday = dayMonth + yyyy;
-          
-          today = mm + "/" + dd + "/" + yyyy;
-    
-        let zzz= '01/26/2025'
-        
-          if (today > zzz) {
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy + 1,
+            dayMonth = "01/26/",
+            birthday = dayMonth + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+
+        let zzz = '01/26/2025'
+
+        if (today > zzz) {
             clearInterval(x);
             alert('Acara pernikahan kami sudah selesai. Terima kasih banyak buat yang sudah hadir! :)');
             return;
-          }
+        }
         const count = (new Date(zzz)).getTime();
-       
-       x = setInterval(() => {
+
+        x = setInterval(() => {
             const distance = Math.abs(count - new Date().getTime());
             document.getElementById('day').innerText = Math.floor(distance / (day));
             document.getElementById('hour').innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             document.getElementById('second').innerText = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          if (distance < 0) {
-            document.getElementById('day').innerText = '0';
-            document.getElementById('hour').innerText = '0';
-            document.getElementById('minute').innerText = '0';
-            document.getElementById('second').innerText = '0';
-            clearInterval(x);
-            alert('Acara pernikahan kami sudah selesai. Terima kasih banyak buat yang sudah hadir! :)');
+
+            if (distance < 0) {
+                document.getElementById('day').innerText = '0';
+                document.getElementById('hour').innerText = '0';
+                document.getElementById('minute').innerText = '0';
+                document.getElementById('second').innerText = '0';
+                clearInterval(x);
+                alert('Acara pernikahan kami sudah selesai. Terima kasih banyak buat yang sudah hadir! :)');
             }
         }, 1000);
     };
@@ -99,9 +99,9 @@ export const guest = (() => {
      * @returns {void}
      */
     const animation = () => {
-        const duration = 10 * 1000;
+        const duration = 15 * 1000;
         const animationEnd = Date.now() + duration;
-        const colors = ['#C71585','#fbbf24','#0D6EFD'];
+        const colors = ['#C71585', '#fbbf24', '#0D6EFD'];
 
         const randomInRange = (min, max) => {
             return Math.random() * (max - min) + min;
@@ -152,7 +152,7 @@ export const guest = (() => {
             const guest = document.getElementById('guest-name');
             if (guest) {
                 const div = document.createElement('div');
-                div.classList.add('m-2');
+                div.classList.add('m-3');
                 div.innerHTML = `
                 <p class="mt-0 mb-1 mx-0 p-0" style="font-size: 0.95rem;">${guest.getAttribute('data-message')}</p>
                 <h2 class="m-0 p-0">${util.escapeHtml(name)}</h2>`;
@@ -190,7 +190,7 @@ export const guest = (() => {
 
         audio.play();
         theme.spyTop();
-        
+
         util.timeOut(animation, 1500);
     };
 
