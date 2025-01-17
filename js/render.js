@@ -196,7 +196,7 @@ export const render = (() => {
         });
 
         initializeGallery();
-        setInterval(autoPlayGallery, 3000);
+        setInterval(autoPlayGallery, 5000);
 
         paginationElement.querySelectorAll("li").forEach((pagination) => {
             pagination.addEventListener("click", (e) => {
@@ -301,7 +301,26 @@ export const render = (() => {
             `;
     })();
 
-
+    const footer = (() => {
+        document.getElementById(
+            "footer"
+        ).innerHTML = `
+                <p style="font-size: 1.3rem">${data.bride.L.alias} &amp; ${data.bride.P.alias}</p>
+                <div class="mb-2 mx-auto border border-3 border-light" data-aos="fade-down" data-aos-duration="2000"
+                    style="height: 240px; width: 190px; overflow: hidden; border-radius: 250px 250px 0px 0px; padding: 10px;">
+                    <img src="${data.link.footerPhoto}" alt="bg" onclick="guest.modal(this)"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 250px 250px 0px 0px;" />
+                </div>
+                <div class="row pb-1 pt-1">
+                    <div class="col-sm-2 col-6 m-auto">
+                        <p style="font-size: 10px">Kel. ${data.bride.L.father} & ${data.bride.L.mother}</p>
+                    </div>
+                    <div class="col-sm-2 col-6 m-auto">
+                        <p style="font-size: 10px">Kel. ${data.bride.P.father} & ${data.bride.P.mother}</p>
+                    </div>
+                </div>
+        `;
+    })();
 
     return {
         welcomePage,
@@ -314,5 +333,6 @@ export const render = (() => {
         galeri,
         kadorekening,
         hadiah,
+        footer
     };
 })();

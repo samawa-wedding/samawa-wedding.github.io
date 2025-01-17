@@ -54,6 +54,7 @@ export const data = {
         homePhoto: './assets/images/photo/dm7.jpg',
         welcomeBackground: './assets/images/photo/dm5.jpg',
         welcomePhoto: './assets/images/photo/dm4_crop.png',
+        footerPhoto: './assets/images/photo/dm1.jpg',
     },
 
     galeri: [
