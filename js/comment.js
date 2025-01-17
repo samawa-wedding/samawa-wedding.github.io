@@ -6,6 +6,7 @@ import { theme } from './theme.js';
 import { session } from './session.js';
 import { storage } from './storage.js';
 import { pagination } from './pagination.js';
+import { render } from './render.js';
 import { request, HTTP_GET, HTTP_POST, HTTP_DELETE, HTTP_PUT } from './request.js';
 
 export const comment = (() => {
@@ -460,6 +461,8 @@ export const comment = (() => {
 
     const scroll = () => document.getElementById('comments').scrollIntoView({ behavior: 'smooth' });
 
+
+
     const init = () => {
         like.init();
         card.init();
@@ -478,6 +481,7 @@ export const comment = (() => {
             showHide.set('show', []);
         }
     };
+
 
     return {
         like,
