@@ -8,12 +8,12 @@ export const render = (() => {
              style="max-width: 100%; max-height: 100%" />
             <div class="text-center">
                 <div class="animate__animated animate__backInDown animate__slower">
-                    <h2 class="font-esthetic mb-4 text-dark" style="font-size: 2rem; font-weight: 350">
+                    <h2 class="font-esthetic mb-4 text-dark" style="font-size: 3rem; font-weight: 350">
                         The Wedding Of
                     </h2>
                     <img src="${data.link.welcomePhoto}" alt="background"
                         class="img-center-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto" />
-                    <h2 class="font-esthetic my-4 text-dark" style="font-size: 3rem; font-weight: 650; color: #ba9c55;">
+                    <h2 class="font-esthetic my-4 text-dark" style="font-size: 3.5rem; font-weight: 350;">
                         ${data.bride.L.alias} &amp; ${data.bride.P.alias}
                     </h2>
                     <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
