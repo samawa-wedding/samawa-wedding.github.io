@@ -100,7 +100,7 @@ export const render = (() => {
     const resepsi = (() => {
         document.getElementById(
             "resepsi"
-        ).innerHTML = `<h2 class="font-esthetic m-0 py-2" style="font-size: 2.5rem">Akad</h2>
+        ).innerHTML = `<h2 class="font-esthetic m-0 py-2" style="font-size: 2.5rem">Resepsi</h2>
                 <p style="font-size: 0.95rem">${data.time.reception.day}, ${data.time.reception.date} ${data.time.reception.month} ${data.time.reception.year}</p>
                 <p class="m-0 mb-0" style="font-size: 0.95rem">${data.time.reception.address}</p>
                 <p class="m-0 mb-1" style="font-size: 0.95rem">Pukul ${data.time.reception.hours.start} WIB - ${data.time.reception.hours.finish}</p>`;
@@ -130,8 +130,10 @@ export const render = (() => {
 
         const initializeGallery = () => {
             const initialImage = data.galeri[0];
+            const initialImagez = data.galeri[2];
+
             figureElement.innerHTML = `<img src="${initialImage.image}" alt="galeri image" id="${initialImage.id}">`;
-            figureElement.innerHTML = `<img src="${initialImage.image}" alt="galeri image" id="${initialImage.id}">`;
+
 
             data.galeri.forEach((item, index) => {
                 paginationElement.innerHTML += `<li data-id="${item.id}" ${index === 0 ? 'class="active"' : ""
